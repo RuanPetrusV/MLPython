@@ -2,7 +2,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 import currency_converter as cucon
-cc = cucon.CurrencyConverter
+cc = cucon.CurrencyConverter()
 
 # Display title and text
 st.title("Week 1 - Data and visualization")
@@ -23,7 +23,7 @@ dataframe = pd.read_csv(
 
 # We have a limited budget, therefore we would like to exclude
 # listings with a price above 100 pounds per night
-dataframe = dataframe[dataframe["Price"] <= 2000]
+dataframe = dataframe[dataframe["Price"] <= cc.convert(100,"USD","ZAR")]
 
 # Display as integer
 dataframe["Airbnb Listing ID"] = dataframe["Airbnb Listing ID"].astype(int)
