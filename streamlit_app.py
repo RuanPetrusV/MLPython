@@ -1,6 +1,8 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+from currency_converter import CurrencyConverter
+cc = CurrencyConverter()
 
 # Display title and text
 st.title("Week 1 - Data and visualization")
