@@ -1,7 +1,7 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-import currencyconverter as cucon
+import currency_converter as cucon
 cc = cucon.CurrencyConverter()
 
 # Display title and text
